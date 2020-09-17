@@ -1,3 +1,8 @@
+## [0.3.2] Update dependencies
+- Update http dependency
+- Update googleapis_auth dependency
+- Add missing knowledgeBaseNames property 
+
 ## [0.3.1] Fix mapping
 - Fix some mappings
 

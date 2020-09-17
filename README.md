@@ -8,7 +8,7 @@ Forked from https://github.com/VictorRancesCode/flutter_dialogflow
 * Add this to your package's pubspec.yaml file:
 ```
 dependencies:
-  flutter_dialogflow_v2: ^0.1.0
+  flutter_dialogflow_v2: ^0.3.2
 ```
 * You can install packages from the command line:
   with Flutter:
