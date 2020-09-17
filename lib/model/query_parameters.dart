@@ -20,6 +20,9 @@ class QueryParameters {
   /// This field can be used to pass custom data into the webhook associated with the agent. Arbitrary JSON objects are supported.
   final Map<String, dynamic> payload;
 
+  ///Knowledge based list - used for accessing responses based on knowledge base functionality
+  final List<String> knowledgeBaseNames;
+
   QueryParameters({
     this.timeZone,
     this.geoLocation,
@@ -27,6 +30,7 @@ class QueryParameters {
     this.resetContexts,
     this.sessionEntityTypes,
     this.payload,
+    this.knowledgeBaseNames,
   });
 
   static QueryParameters fromJson(Map<String, dynamic> json) => QueryParameters(
@@ -46,6 +50,7 @@ class QueryParameters {
                 .map((s) => SessionEntityType.fromJson(s))
                 .toList(),
         payload: json['payload'],
+        knowledgeBaseNames: json['knowledgeBaseNames'],
       );
 
   Map<String, dynamic> toJson() => <String, dynamic>{
@@ -58,5 +63,6 @@ class QueryParameters {
             ? null
             : sessionEntityTypes.map((s) => s.toJson()).toList(),
         'payload': payload,
+        'knowledgeBaseNames': knowledgeBaseNames,
       };
 }
